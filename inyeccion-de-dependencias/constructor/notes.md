@@ -1,0 +1,2 @@
+En este ejemplo, hemos aplicado la inyección de dependencias al proporcionar diferentes implementaciones de Engine a la clase Car a través de su constructor. 
+Esto permite que la clase Car sea flexible y pueda funcionar con diferentes tipos de motores sin modificar su código interno.

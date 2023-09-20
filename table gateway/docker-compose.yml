@@ -1,0 +1,29 @@
+version: '3'
+services:                     
+    db:
+        container_name: mysql
+        image: mysql:8.0.19
+        networks:
+            - docker-kub-lab         
+        ports:
+            - 3306:3306
+        restart: always    
+        environment:
+            MYSQL_DATABASE: dbname
+            MYSQL_USER: root
+            MYSQL_PASSWORD: test
+            MYSQL_ROOT_PASSWORD: test
+        command:
+            'mysqld'
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        ports:
+            - 8000:80
+        links: 
+            - db:db
+        environment:
+            MYSQL_USER: root
+            MYSQL_PASSWORD: test
+            MYSQL_ROOT_PASSWORD: test
+networks:
+    docker-kub-lab:           

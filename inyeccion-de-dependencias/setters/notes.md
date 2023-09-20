@@ -1,0 +1,1 @@
+Aquí, la clase PaymentProcessor puede tener su dependencia PaymentGateway establecida o cambiada usando el método setPaymentGateway.
